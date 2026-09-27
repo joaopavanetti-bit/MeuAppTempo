@@ -1,0 +1,38 @@
+﻿<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MeuAppTempo.MainPage"
+    Title="Tempo Agora">
+
+    <VerticalStackLayout Padding="25" Spacing="18">
+
+        <Label
+            Text="Previsão do tempo"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Label Text="Digite o nome de uma cidade:" />
+
+        <Entry
+            x:Name="txtCidade"
+            Placeholder="Exemplo: Taubaté" />
+
+        <Button
+            Text="Buscar previsão"
+            Clicked="BuscarPrevisao_Clicked" />
+
+        <ActivityIndicator
+            x:Name="carregando"
+            IsRunning="False"
+            IsVisible="False" />
+
+        <Label
+            x:Name="lblResultado"
+            Text="A previsão aparecerá aqui."
+            FontSize="18"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
